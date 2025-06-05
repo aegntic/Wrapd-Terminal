@@ -1,0 +1,270 @@
+/* Nine Inch Nails Industrial Theme - Dark Mode */
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #0d0d0d, stop:0.3 #1a1a1a, stop:0.7 #262626, stop:1 #0d0d0d);
+    color: #ff8c00;
+    border: 2px solid #4a4a4a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 2L38 10v20L20 38 2 30V10z' fill='none' stroke='%234a4a4a' stroke-width='0.5' opacity='0.1'/%3E%3Ccircle cx='20' cy='20' r='2' fill='%23ff8c00' opacity='0.05'/%3E%3Cpath d='M10 10h20M10 20h20M10 30h20' stroke='%234a4a4a' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #2a2a2a, stop:1 #0d0d0d);
+    color: #ff8c00;
+    border-bottom: 1px solid #4682b4;
+    font-weight: bold;
+    padding: 2px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 8px;
+    border: 1px solid transparent;
+}
+
+QMenuBar::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #4682b4, stop:1 #2f4f4f);
+    color: #ffffff;
+    border: 1px solid #8b0000;
+}
+
+QMenu {
+    background: #1a1a1a;
+    color: #ff8c00;
+    border: 2px solid #4682b4;
+    border-radius: 2px;
+    font-family: 'Courier New', monospace;
+}
+
+QMenu::item {
+    padding: 6px 12px;
+    border-bottom: 1px solid #333333;
+}
+
+QMenu::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8b0000, stop:1 #cd5c5c);
+    color: #ffffff;
+}
+
+QTabWidget::pane {
+    border: 2px solid #4682b4;
+    background: #0d0d0d;
+    border-radius: 0px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #2a2a2a, stop:1 #1a1a1a);
+    color: #ff8c00;
+    border: 2px solid #4a4a4a;
+    border-bottom: none;
+    padding: 8px 12px;
+    margin-right: 1px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    min-width: 80px;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #4682b4, stop:1 #2f4f4f);
+    color: #ffffff;
+    border: 2px solid #8b0000;
+    border-bottom: 2px solid #4682b4;
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #8b0000, stop:1 #654321);
+    color: #ffffff;
+    border: 2px solid #ff8c00;
+}
+
+QTextEdit, QPlainTextEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #000000, stop:0.5 #0d0d0d, stop:1 #000000);
+    color: #ff8c00;
+    border: 2px solid #4682b4;
+    border-radius: 0px;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 11px;
+    selection-background-color: #8b0000;
+    selection-color: #ffffff;
+    padding: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%234a4a4a' stroke-width='0.3' opacity='0.05'%3E%3Cpath d='M10 10h40M10 20h40M10 30h40M10 40h40M10 50h40'/%3E%3Cpath d='M10 10v40M20 10v40M30 10v40M40 10v40M50 10v40'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23ff8c00' opacity='0.03'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+QLineEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #1a1a1a, stop:1 #2a2a2a);
+    color: #ff8c00;
+    border: 2px solid #4682b4;
+    border-radius: 0px;
+    padding: 6px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+QLineEdit:focus {
+    border: 2px solid #8b0000;
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #4a4a4a, stop:1 #2a2a2a);
+    color: #ff8c00;
+    border: 2px solid #4682b4;
+    border-radius: 0px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #8b0000, stop:1 #654321);
+    border: 2px solid #ff8c00;
+    color: #ffffff;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #cd5c5c, stop:1 #8b0000);
+    border: 2px solid #ffffff;
+    color: #000000;
+}
+
+QToolBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #2a2a2a, stop:1 #1a1a1a);
+    border: 2px solid #4a4a4a;
+    border-radius: 0px;
+    spacing: 3px;
+    padding: 4px;
+}
+
+QToolButton {
+    background: transparent;
+    color: #ff8c00;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    padding: 6px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+QToolButton:hover {
+    background: #8b0000;
+    color: #ffffff;
+    border: 1px solid #4682b4;
+}
+
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1a1a1a, stop:1 #2a2a2a);
+    color: #ff8c00;
+    border-top: 1px solid #4682b4;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+}
+
+QLabel {
+    color: #ff8c00;
+    background: transparent;
+    font-family: 'Courier New', monospace;
+}
+
+QSlider::groove:horizontal {
+    border: 2px solid #4682b4;
+    height: 8px;
+    background: #0d0d0d;
+    border-radius: 0px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #8b0000, stop:1 #654321);
+    border: 2px solid #ff8c00;
+    width: 16px;
+    margin: -6px 0;
+    border-radius: 0px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #ff8c00;
+    border: 2px solid #ffffff;
+}
+
+QScrollBar:vertical {
+    background: #1a1a1a;
+    width: 16px;
+    border: 2px solid #4a4a4a;
+    border-radius: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #4682b4, stop:1 #2f4f4f);
+    border: 1px solid #8b0000;
+    border-radius: 0px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #8b0000;
+    border: 1px solid #ff8c00;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: #2a2a2a;
+    border: 1px solid #4a4a4a;
+    height: 14px;
+}
+
+QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover {
+    background: #4682b4;
+}
+
+/* Industrial Circuit Pattern for Terminal Background */
+QTextEdit::before, QPlainTextEdit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='%234a4a4a' stroke-width='0.5' opacity='0.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3Cg stroke='%23ff8c00' stroke-width='0.3' opacity='0.03'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='60' cy='20' r='2'/%3E%3Ccircle cx='20' cy='60' r='2'/%3E%3Ccircle cx='60' cy='60' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* Industrial styling for special elements */
+QTabBar::tab:selected::before {
+    content: "▲";
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+/* Watermark styling for NIN dark theme */
+.watermark-logo {
+    color: rgba(255, 140, 0, 0.15) !important;
+    text-shadow: 0 0 10px rgba(70, 130, 180, 0.2);
+    font-family: 'Courier New', monospace !important;
+}
+
+.watermark-tagline {
+    color: rgba(255, 140, 0, 0.12) !important;
+    text-shadow: 0 0 8px rgba(70, 130, 180, 0.15);
+    font-family: 'Courier New', monospace !important;
+}

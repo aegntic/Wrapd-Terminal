@@ -1,0 +1,252 @@
+/* Rocko's Modern Life Theme - Light Mode */
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #f0f8ff, stop:0.2 #e6f3ff, stop:0.4 #f0f8ff, stop:0.6 #e6f3ff, stop:0.8 #f0f8ff, stop:1 #e6f3ff);
+    color: #ff4500;
+    border: 3px solid #ff4500;
+}
+
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #e6f3ff, stop:1 #f0f8ff);
+    color: #ff4500;
+    border-bottom: 3px solid #1e90ff;
+    font-weight: bold;
+    padding: 3px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+QMenuBar::item:selected {
+    background: #ffff00;
+    color: #8b008b;
+    border: 2px solid #ff69b4;
+}
+
+QMenu {
+    background: #e6f3ff;
+    color: #ff4500;
+    border: 3px solid #1e90ff;
+    border-radius: 10px;
+}
+
+QMenu::item:selected {
+    background: #ffff00;
+    color: #8b008b;
+}
+
+QTabWidget::pane {
+    border: 3px solid #1e90ff;
+    background: #f0f8ff;
+    border-radius: 10px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ddeeff, stop:1 #e6f3ff);
+    color: #ff4500;
+    border: 2px solid #1e90ff;
+    border-bottom: none;
+    padding: 10px 15px;
+    margin-right: 3px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff4500, stop:1 #ff6b35);
+    color: #ffffff;
+    border: 3px solid #ffff00;
+    border-bottom: 3px solid #ff4500;
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff69b4, stop:1 #ff1493);
+    color: #ffffff;
+    border: 2px solid #1e90ff;
+}
+
+QTabBar::tab:nth-child(even) {
+    border-color: #ff69b4;
+}
+
+QTabBar::tab:nth-child(odd) {
+    border-color: #1e90ff;
+}
+
+QTextEdit, QPlainTextEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #ffffff, stop:0.3 #f8fcff, stop:0.7 #f8fcff, stop:1 #ffffff);
+    color: #ff4500;
+    border: 3px solid #1e90ff;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    selection-background-color: #ff4500;
+    selection-color: #ffffff;
+    padding: 8px;
+}
+
+QLineEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #f0f8ff, stop:1 #e6f3ff);
+    color: #ff4500;
+    border: 3px solid #1e90ff;
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QLineEdit:focus {
+    border: 4px solid #ffff00;
+    background: #e6f3ff;
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff4500, stop:1 #ff6b35);
+    color: #ffffff;
+    border: 3px solid #ffff00;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff69b4, stop:1 #ff1493);
+    border: 3px solid #1e90ff;
+    color: #ffffff;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffff00, stop:1 #ffd700);
+    border: 3px solid #ff4500;
+    color: #8b008b;
+}
+
+QToolBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #e6f3ff, stop:1 #f0f8ff);
+    border: 3px solid #ff69b4;
+    border-radius: 10px;
+    spacing: 5px;
+    padding: 5px;
+}
+
+QToolButton {
+    background: transparent;
+    color: #ff4500;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+QToolButton:hover {
+    background: #ff69b4;
+    color: #ffffff;
+    border: 2px solid #1e90ff;
+}
+
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f0f8ff, stop:1 #e6f3ff);
+    color: #ff4500;
+    border-top: 3px solid #1e90ff;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QLabel {
+    color: #ff4500;
+    background: transparent;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QSlider::groove:horizontal {
+    border: 2px solid #1e90ff;
+    height: 12px;
+    background: #f0f8ff;
+    border-radius: 6px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff4500, stop:1 #ff6b35);
+    border: 3px solid #ffff00;
+    width: 22px;
+    margin: -8px 0;
+    border-radius: 11px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #ff69b4;
+    border: 3px solid #1e90ff;
+}
+
+QScrollBar:vertical {
+    background: #e6f3ff;
+    width: 20px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #ff4500, stop:1 #ff6b35);
+    border: 2px solid #ffff00;
+    border-radius: 8px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #ff69b4;
+    border: 2px solid #1e90ff;
+}
+
+/* 90s Retro Geometric Pattern for Terminal Background */
+QTextEdit::before, QPlainTextEdit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpolygon points='15,2 28,8 28,22 15,28 2,22 2,8' fill='none' stroke='%23ff4500' stroke-width='1' opacity='0.08'/%3E%3Ccircle cx='15' cy='15' r='3' fill='%231e90ff' opacity='0.05'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* 90s styling for special elements */
+QTabBar::tab:selected::before {
+    content: "📺";
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Watermark styling for Rocko light theme */
+.watermark-logo {
+    color: rgba(255, 69, 0, 0.25) !important;
+    text-shadow: 0 0 15px rgba(30, 144, 255, 0.4);
+}
+
+.watermark-tagline {
+    color: rgba(255, 69, 0, 0.2) !important;
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+}

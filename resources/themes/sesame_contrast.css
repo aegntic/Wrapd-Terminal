@@ -1,0 +1,275 @@
+/* Sesame Street Theme - High Contrast Mode */
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #000000, stop:0.25 #1a1a1a, stop:0.5 #000000, stop:0.75 #1a1a1a, stop:1 #000000);
+    color: #ffffff;
+    border: 4px solid #ffff00;
+    border-radius: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1a1a1a, stop:1 #000000);
+    color: #ffffff;
+    border-bottom: 4px solid #ffff00;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 6px;
+    border-radius: 5px 5px 0 0;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin: 2px;
+    border: 2px solid transparent;
+}
+
+QMenuBar::item:selected {
+    background: #ff0000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+QMenu {
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 4px solid #ffff00;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QMenu::item:selected {
+    background: #0000ff;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+QTabWidget::pane {
+    border: 4px solid #ffff00;
+    background: #000000;
+    border-radius: 10px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #333333, stop:1 #1a1a1a);
+    color: #ffffff;
+    border: 3px solid #ffff00;
+    border-bottom: none;
+    padding: 12px 20px;
+    margin-right: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffff00, stop:1 #ff8c00);
+    color: #000000;
+    border-bottom: 4px solid #ffff00;
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff0000, stop:1 #cc0000);
+    color: #ffffff;
+}
+
+QTabBar::tab:first-child {
+    border-color: #ff0000; /* High contrast Elmo red */
+}
+
+QTabBar::tab:nth-child(2) {
+    border-color: #0000ff; /* High contrast Cookie Monster blue */
+}
+
+QTabBar::tab:nth-child(3) {
+    border-color: #ffff00; /* High contrast Big Bird yellow */
+}
+
+QTabBar::tab:nth-child(4) {
+    border-color: #00ff00; /* High contrast Oscar green */
+}
+
+QTextEdit, QPlainTextEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #000000, stop:0.3 #1a1a1a, stop:0.7 #1a1a1a, stop:1 #000000);
+    color: #ffffff;
+    border: 4px solid #ffff00;
+    border-radius: 10px;
+    font-family: "Comic Sans MS", cursive, monospace;
+    font-size: 14px;
+    font-weight: bold;
+    selection-background-color: #0000ff;
+    selection-color: #ffffff;
+    padding: 10px;
+}
+
+QLineEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #000000, stop:1 #1a1a1a);
+    color: #ffffff;
+    border: 4px solid #ffff00;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 5px solid #ff0000;
+    background: #1a1a1a;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffff00, stop:1 #ff8c00);
+    color: #000000;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    padding: 15px 25px;
+    font-weight: bold;
+    font-size: 15px;
+    min-width: 120px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff0000, stop:1 #cc0000);
+    color: #ffffff;
+    border: 4px solid #ffff00;
+    transform: scale(1.1);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00ff00, stop:1 #00cc00);
+    color: #000000;
+    border: 4px solid #ffffff;
+}
+
+QToolBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1a1a1a, stop:1 #000000);
+    border: 4px solid #ffff00;
+    border-radius: 10px;
+    spacing: 5px;
+    padding: 5px;
+}
+
+QToolButton {
+    background: transparent;
+    color: #ffffff;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QToolButton:hover {
+    background: #ff0000;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+}
+
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #000000, stop:1 #1a1a1a);
+    color: #ffffff;
+    border-top: 4px solid #ffff00;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+}
+
+QLabel {
+    color: #ffffff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QSlider::groove:horizontal {
+    border: 3px solid #ffff00;
+    height: 12px;
+    background: #000000;
+    border-radius: 6px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffff00, stop:1 #ff8c00);
+    border: 3px solid #ffffff;
+    width: 25px;
+    margin: -8px 0;
+    border-radius: 12px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #ff0000;
+    border: 3px solid #ffffff;
+}
+
+QScrollBar:vertical {
+    background: #1a1a1a;
+    width: 20px;
+    border: 3px solid #ffff00;
+    border-radius: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #ffff00, stop:1 #ff8c00);
+    border: 3px solid #ffffff;
+    border-radius: 7px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #ff0000;
+}
+
+/* Bold Educational Pattern for Terminal Background */
+QTextEdit::before, QPlainTextEdit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ctext x='10' y='25' font-family='Comic Sans MS' font-size='20' fill='%23ffff00' opacity='0.1' font-weight='bold'%3EABC%3C/text%3E%3Ctext x='10' y='50' font-family='Comic Sans MS' font-size='20' fill='%23ff0000' opacity='0.1' font-weight='bold'%3E123%3C/text%3E%3Crect x='40' y='5' width='15' height='15' fill='none' stroke='%23ffffff' stroke-width='2' opacity='0.05'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* High contrast educational symbols for special elements */
+QTabBar::tab:selected::before {
+    content: "★";
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Watermark styling for Sesame Street high contrast theme */
+.watermark-logo {
+    color: rgba(255, 255, 255, 0.3) !important;
+    text-shadow: 0 0 25px rgba(255, 255, 0, 0.5);
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+    font-weight: bold !important;
+}
+
+.watermark-tagline {
+    color: rgba(255, 255, 255, 0.2) !important;
+    text-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+    font-weight: bold !important;
+}

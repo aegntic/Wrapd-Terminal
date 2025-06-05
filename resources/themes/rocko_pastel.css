@@ -1,0 +1,251 @@
+/* Rocko's Modern Life Theme - Pastel Mode */
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #fef7ff, stop:0.2 #f5f0ff, stop:0.4 #fef7ff, stop:0.6 #f5f0ff, stop:0.8 #fef7ff, stop:1 #f5f0ff);
+    color: #ff8c69;
+    border: 2px solid #dda0dd;
+}
+
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f5f0ff, stop:1 #fef7ff);
+    color: #ff8c69;
+    border-bottom: 2px solid #b19cd9;
+    font-weight: bold;
+    padding: 2px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+QMenuBar::item:selected {
+    background: #fff0f5;
+    color: #8b7d7b;
+    border: 1px solid #dda0dd;
+}
+
+QMenu {
+    background: #f5f0ff;
+    color: #ff8c69;
+    border: 2px solid #b19cd9;
+    border-radius: 8px;
+}
+
+QMenu::item:selected {
+    background: #fff0f5;
+    color: #8b7d7b;
+}
+
+QTabWidget::pane {
+    border: 2px solid #b19cd9;
+    background: #fef7ff;
+    border-radius: 8px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f0e6ff, stop:1 #f5f0ff);
+    color: #ff8c69;
+    border: 1px solid #b19cd9;
+    border-bottom: none;
+    padding: 8px 12px;
+    margin-right: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff8c69, stop:1 #ffa07a);
+    color: #8b7d7b;
+    border: 2px solid #fff0f5;
+    border-bottom: 2px solid #ff8c69;
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #dda0dd, stop:1 #da70d6);
+    color: #ffffff;
+    border: 1px solid #b19cd9;
+}
+
+QTabBar::tab:nth-child(even) {
+    border-color: #dda0dd;
+}
+
+QTabBar::tab:nth-child(odd) {
+    border-color: #b19cd9;
+}
+
+QTextEdit, QPlainTextEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #ffffff, stop:0.3 #fefcff, stop:0.7 #fefcff, stop:1 #ffffff);
+    color: #ff8c69;
+    border: 2px solid #b19cd9;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    selection-background-color: #ff8c69;
+    selection-color: #ffffff;
+    padding: 6px;
+}
+
+QLineEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #fef7ff, stop:1 #f5f0ff);
+    color: #ff8c69;
+    border: 2px solid #b19cd9;
+    border-radius: 8px;
+    padding: 6px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QLineEdit:focus {
+    border: 3px solid #fff0f5;
+    background: #f5f0ff;
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff8c69, stop:1 #ffa07a);
+    color: #8b7d7b;
+    border: 2px solid #fff0f5;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #dda0dd, stop:1 #da70d6);
+    border: 2px solid #b19cd9;
+    color: #ffffff;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #fff0f5, stop:1 #ffe4e1);
+    border: 2px solid #ff8c69;
+    color: #8b7d7b;
+}
+
+QToolBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f5f0ff, stop:1 #fef7ff);
+    border: 2px solid #dda0dd;
+    border-radius: 8px;
+    spacing: 3px;
+    padding: 3px;
+}
+
+QToolButton {
+    background: transparent;
+    color: #ff8c69;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: bold;
+}
+
+QToolButton:hover {
+    background: #dda0dd;
+    color: #ffffff;
+    border: 1px solid #b19cd9;
+}
+
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #fef7ff, stop:1 #f5f0ff);
+    color: #ff8c69;
+    border-top: 2px solid #b19cd9;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QLabel {
+    color: #ff8c69;
+    background: transparent;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #b19cd9;
+    height: 10px;
+    background: #fef7ff;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff8c69, stop:1 #ffa07a);
+    border: 2px solid #fff0f5;
+    width: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #dda0dd;
+    border: 2px solid #b19cd9;
+}
+
+QScrollBar:vertical {
+    background: #f5f0ff;
+    width: 15px;
+    border: 1px solid #dda0dd;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #ff8c69, stop:1 #ffa07a);
+    border: 1px solid #fff0f5;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #dda0dd;
+}
+
+/* Soft 90s Retro Pattern for Terminal Background */
+QTextEdit::before, QPlainTextEdit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpolygon points='15,2 28,8 28,22 15,28 2,22 2,8' fill='none' stroke='%23ff8c69' stroke-width='1' opacity='0.04'/%3E%3Ccircle cx='15' cy='15' r='3' fill='%23b19cd9' opacity='0.02'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* Soft 90s styling for special elements */
+QTabBar::tab:selected::before {
+    content: "🌸📺";
+    color: #8b7d7b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Watermark styling for Rocko pastel theme */
+.watermark-logo {
+    color: rgba(255, 140, 105, 0.2) !important;
+    text-shadow: 0 0 10px rgba(177, 156, 217, 0.3);
+}
+
+.watermark-tagline {
+    color: rgba(255, 140, 105, 0.15) !important;
+    text-shadow: 0 0 5px rgba(177, 156, 217, 0.2);
+}

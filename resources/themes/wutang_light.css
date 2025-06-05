@@ -1,0 +1,232 @@
+/* Wu-Tang Clan / Killa Bee Theme - Light Mode */
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #fffef7, stop:0.5 #fff8dc, stop:1 #fffef7);
+    color: #8b4513;
+    border: 2px solid #daa520;
+}
+
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #fff8dc, stop:1 #fffef7);
+    color: #8b4513;
+    border-bottom: 2px solid #daa520;
+    font-weight: bold;
+    padding: 2px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+QMenuBar::item:selected {
+    background: #daa520;
+    color: #ffffff;
+    border: 1px solid #ffd700;
+}
+
+QMenu {
+    background: #fff8dc;
+    color: #8b4513;
+    border: 2px solid #daa520;
+    border-radius: 5px;
+}
+
+QMenu::item:selected {
+    background: #daa520;
+    color: #ffffff;
+}
+
+QTabWidget::pane {
+    border: 2px solid #daa520;
+    background: #fffef7;
+    border-radius: 5px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f5f5dc, stop:1 #fff8dc);
+    color: #8b4513;
+    border: 1px solid #daa520;
+    border-bottom: none;
+    padding: 8px 12px;
+    margin-right: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #daa520, stop:1 #ffd700);
+    color: #ffffff;
+    border-bottom: 2px solid #daa520;
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffd700, stop:1 #daa520);
+    color: #ffffff;
+}
+
+QTextEdit, QPlainTextEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #ffffff, stop:0.3 #fffef7, stop:0.7 #fffef7, stop:1 #ffffff);
+    color: #8b4513;
+    border: 2px solid #daa520;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    selection-background-color: #daa520;
+    selection-color: #ffffff;
+    padding: 5px;
+}
+
+QLineEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #fffef7, stop:1 #fff8dc);
+    color: #8b4513;
+    border: 2px solid #daa520;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+QLineEdit:focus {
+    border: 3px solid #ffd700;
+    background: #fff8dc;
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #daa520, stop:1 #b8860b);
+    color: #ffffff;
+    border: 2px solid #daa520;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffd700, stop:1 #daa520);
+    border: 2px solid #ffd700;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #b8860b, stop:1 #daa520);
+    border: 2px solid #b8860b;
+}
+
+QToolBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #fff8dc, stop:1 #fffef7);
+    border: 2px solid #daa520;
+    border-radius: 5px;
+    spacing: 3px;
+    padding: 2px;
+}
+
+QToolButton {
+    background: transparent;
+    color: #8b4513;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+QToolButton:hover {
+    background: #daa520;
+    color: #ffffff;
+    border: 1px solid #ffd700;
+}
+
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #fffef7, stop:1 #fff8dc);
+    color: #8b4513;
+    border-top: 2px solid #daa520;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #8b4513;
+    background: transparent;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #daa520;
+    height: 8px;
+    background: #fffef7;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #daa520, stop:1 #b8860b);
+    border: 2px solid #daa520;
+    width: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #ffd700;
+    border: 2px solid #ffd700;
+}
+
+QScrollBar:vertical {
+    background: #fff8dc;
+    width: 15px;
+    border: 1px solid #daa520;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #daa520, stop:1 #b8860b);
+    border: 1px solid #daa520;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #ffd700;
+}
+
+/* Killa Bee Honeycomb Pattern for Terminal Background */
+QTextEdit::before, QPlainTextEdit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0l26 15v30L30 60 4 45V15z' fill='%23daa520' fill-opacity='0.05'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* Wu-Tang "W" styling for special elements */
+QTabBar::tab:selected::before {
+    content: "⚡";
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Watermark styling for Wu-Tang light theme */
+.watermark-logo {
+    color: rgba(139, 69, 19, 0.2) !important;
+    text-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+}
+
+.watermark-tagline {
+    color: rgba(139, 69, 19, 0.15) !important;
+    text-shadow: 0 0 5px rgba(218, 165, 32, 0.2);
+}

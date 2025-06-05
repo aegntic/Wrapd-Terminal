@@ -1,0 +1,332 @@
+/* WRAPD Warp-Style Glass Theme */
+
+QWidget {
+    background-color: rgba(25, 25, 35, 0.85);
+    color: #eeeeee;
+    font-family: "Consolas", "Menlo", monospace;
+    border-radius: 6px;
+}
+
+QMainWindow {
+    background-color: rgba(20, 20, 30, 0.9);
+}
+
+QTextEdit {
+    background-color: rgba(15, 15, 25, 0.8);
+    color: #eeeeee;
+    border: none;
+    border-radius: 8px;
+    selection-background-color: rgba(100, 120, 200, 0.5);
+}
+
+QLineEdit {
+    background-color: rgba(15, 15, 25, 0.6);
+    color: #eeeeee;
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 4px;
+    padding: 4px;
+    selection-background-color: rgba(100, 120, 200, 0.5);
+}
+
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                      stop:0 rgba(75, 75, 120, 0.7), stop:1 rgba(55, 55, 95, 0.7));
+    color: #eeeeee;
+    border: 1px solid rgba(100, 100, 150, 0.4);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                      stop:0 rgba(85, 85, 135, 0.8), stop:1 rgba(65, 65, 110, 0.8));
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                      stop:0 rgba(65, 65, 110, 0.9), stop:1 rgba(85, 85, 135, 0.9));
+}
+
+QComboBox {
+    background-color: rgba(40, 40, 60, 0.6);
+    color: #eeeeee;
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 4px;
+    padding: 3px 5px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 18px;
+    border-left: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 0;
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgba(40, 40, 60, 0.9);
+    color: #eeeeee;
+    selection-background-color: rgba(100, 120, 200, 0.5);
+    border-radius: 4px;
+}
+
+QTabWidget::pane {
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 6px;
+}
+
+QTabBar::tab {
+    background-color: rgba(40, 40, 60, 0.5);
+    color: #eeeeee;
+    padding: 6px 12px;
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+QTabBar::tab:selected {
+    background-color: rgba(15, 15, 25, 0.7);
+    border-bottom: none;
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px;
+}
+
+QScrollBar:vertical {
+    background-color: rgba(30, 30, 45, 0.3);
+    width: 12px;
+    margin: 12px 0 12px 0;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                        stop:0 rgba(100, 120, 200, 0.5), stop:1 rgba(80, 100, 180, 0.5));
+    min-height: 30px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                        stop:0 rgba(120, 140, 220, 0.6), stop:1 rgba(100, 120, 200, 0.6));
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color: rgba(30, 30, 45, 0.3);
+    height: 12px;
+    margin: 0 12px 0 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                        stop:0 rgba(100, 120, 200, 0.5), stop:1 rgba(80, 100, 180, 0.5));
+    min-width: 30px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                        stop:0 rgba(120, 140, 220, 0.6), stop:1 rgba(100, 120, 200, 0.6));
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    background: none;
+}
+
+QMenu {
+    background-color: rgba(30, 30, 45, 0.95);
+    color: #eeeeee;
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 5px;
+}
+
+QMenu::item {
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+QMenu::item:selected {
+    background-color: rgba(100, 120, 200, 0.3);
+}
+
+QMenuBar {
+    background-color: rgba(20, 20, 30, 0.9);
+    color: #eeeeee;
+}
+
+QMenuBar::item {
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+QMenuBar::item:selected {
+    background-color: rgba(100, 120, 200, 0.3);
+}
+
+QStatusBar {
+    background-color: rgba(20, 20, 30, 0.9);
+    color: #eeeeee;
+}
+
+QToolBar {
+    background-color: rgba(20, 20, 30, 0.8);
+    border: none;
+    border-radius: 6px;
+    spacing: 3px;
+    padding: 3px;
+}
+
+QLabel {
+    background-color: transparent;
+    color: #eeeeee;
+}
+
+QGroupBox {
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 6px;
+    margin-top: 12px;
+    padding-top: 12px;
+    background-color: rgba(30, 30, 45, 0.5);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+    background-color: transparent;
+}
+
+QCheckBox {
+    spacing: 5px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator:unchecked {
+    border: 1px solid rgba(80, 80, 120, 0.5);
+    background-color: rgba(15, 15, 25, 0.6);
+}
+
+QCheckBox::indicator:checked {
+    border: 1px solid rgba(100, 120, 200, 0.5);
+    background-color: rgba(80, 100, 180, 0.5);
+}
+
+QRadioButton {
+    spacing: 5px;
+    background-color: transparent;
+}
+
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}
+
+QRadioButton::indicator:unchecked {
+    border: 1px solid rgba(80, 80, 120, 0.5);
+    border-radius: 7px;
+    background-color: rgba(15, 15, 25, 0.6);
+}
+
+QRadioButton::indicator:checked {
+    border: 1px solid rgba(100, 120, 200, 0.5);
+    border-radius: 7px;
+    background-color: rgba(80, 100, 180, 0.5);
+}
+
+QSpinBox, QDoubleSpinBox {
+    background-color: rgba(15, 15, 25, 0.6);
+    color: #eeeeee;
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 4px;
+    padding: 3px;
+}
+
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 16px;
+    border-left: 1px solid rgba(80, 80, 120, 0.3);
+    border-bottom: 1px solid rgba(80, 80, 120, 0.3);
+    border-top-right-radius: 3px;
+}
+
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 16px;
+    border-left: 1px solid rgba(80, 80, 120, 0.3);
+    border-top: 1px solid rgba(80, 80, 120, 0.3);
+    border-bottom-right-radius: 3px;
+}
+
+QProgressBar {
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    border-radius: 4px;
+    text-align: center;
+    background-color: rgba(15, 15, 25, 0.6);
+}
+
+QProgressBar::chunk {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                        stop:0 rgba(100, 120, 200, 0.7), stop:1 rgba(80, 100, 180, 0.7));
+    width: 1px;
+    border-radius: 3px;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid rgba(80, 80, 120, 0.3);
+    height: 8px;
+    background: rgba(15, 15, 25, 0.6);
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                        stop:0 rgba(100, 120, 200, 0.8), stop:1 rgba(80, 100, 180, 0.8));
+    border: 1px solid rgba(120, 140, 220, 0.5);
+    width: 14px;
+    margin: -4px 0;
+    border-radius: 7px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                        stop:0 rgba(120, 140, 220, 0.9), stop:1 rgba(100, 120, 200, 0.9));
+}
+
+/* Terminal-specific styling for a Warp-like experience */
+QWidget#TerminalWidget {
+    background-color: rgba(13, 13, 23, 0.85);
+    border-radius: 8px;
+}
+
+QTextEdit#terminal_display {
+    background-color: rgba(10, 10, 18, 0.7);
+    border-radius: 8px;
+    font-family: "Fira Code", "JetBrains Mono", "Consolas", monospace;
+    selection-background-color: rgba(100, 120, 200, 0.4);
+    padding: 5px;
+}
+
+QLineEdit#command_input {
+    background-color: rgba(20, 20, 35, 0.6);
+    border: 1px solid rgba(80, 100, 180, 0.3);
+    border-radius: 4px;
+    padding: 5px;
+    font-family: "Fira Code", "JetBrains Mono", "Consolas", monospace;
+    selection-background-color: rgba(100, 120, 200, 0.4);
+}

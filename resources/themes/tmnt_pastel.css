@@ -1,0 +1,249 @@
+/* Teenage Mutant Ninja Turtles Theme - Pastel Mode */
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #f0fff0, stop:0.25 #e6ffe6, stop:0.5 #f0fff0, stop:0.75 #e6ffe6, stop:1 #f0fff0);
+    color: #4a7c59;
+    border: 2px solid #98fb98;
+}
+
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #e6ffe6, stop:1 #f0fff0);
+    color: #4a7c59;
+    border-bottom: 2px solid #98fb98;
+    font-weight: bold;
+    padding: 2px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+QMenuBar::item:selected {
+    background: #ffb6c1;
+    color: #8b4789;
+    border: 1px solid #ffc0cb;
+}
+
+QMenu {
+    background: #e6ffe6;
+    color: #4a7c59;
+    border: 2px solid #98fb98;
+    border-radius: 5px;
+}
+
+QMenu::item:selected {
+    background: #ffb6c1;
+    color: #8b4789;
+}
+
+QTabWidget::pane {
+    border: 2px solid #98fb98;
+    background: #f0fff0;
+    border-radius: 5px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #dffedd, stop:1 #e6ffe6);
+    color: #4a7c59;
+    border: 1px solid #98fb98;
+    border-bottom: none;
+    padding: 8px 12px;
+    margin-right: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #98fb98, stop:1 #90ee90);
+    color: #2d4a37;
+    border-bottom: 2px solid #98fb98;
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffb6c1, stop:1 #ffc0cb);
+    color: #8b4789;
+}
+
+QTabBar::tab:first-child {
+    border-color: #87ceeb; /* Leonardo light blue */
+}
+
+QTabBar::tab:nth-child(2) {
+    border-color: #dda0dd; /* Donatello light purple */
+}
+
+QTabBar::tab:nth-child(3) {
+    border-color: #ffdab9; /* Michelangelo peach */
+}
+
+QTabBar::tab:nth-child(4) {
+    border-color: #f0a0a0; /* Raphael light red */
+}
+
+QTextEdit, QPlainTextEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #fafffe, stop:0.3 #f8fff8, stop:0.7 #f8fff8, stop:1 #fafffe);
+    color: #4a7c59;
+    border: 2px solid #98fb98;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    selection-background-color: #98fb98;
+    selection-color: #2d4a37;
+    padding: 5px;
+}
+
+QLineEdit {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #f0fff0, stop:1 #e6ffe6);
+    color: #4a7c59;
+    border: 2px solid #98fb98;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+QLineEdit:focus {
+    border: 3px solid #ffb6c1;
+    background: #e6ffe6;
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #98fb98, stop:1 #90ee90);
+    color: #2d4a37;
+    border: 2px solid #98fb98;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffb6c1, stop:1 #ffc0cb);
+    border: 2px solid #ffb6c1;
+    color: #8b4789;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #90ee90, stop:1 #98fb98);
+    border: 2px solid #90ee90;
+}
+
+QToolBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #e6ffe6, stop:1 #f0fff0);
+    border: 2px solid #98fb98;
+    border-radius: 5px;
+    spacing: 3px;
+    padding: 2px;
+}
+
+QToolButton {
+    background: transparent;
+    color: #4a7c59;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+QToolButton:hover {
+    background: #ffb6c1;
+    color: #8b4789;
+    border: 1px solid #ffc0cb;
+}
+
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f0fff0, stop:1 #e6ffe6);
+    color: #4a7c59;
+    border-top: 2px solid #98fb98;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #4a7c59;
+    background: transparent;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #98fb98;
+    height: 8px;
+    background: #f0fff0;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #98fb98, stop:1 #90ee90);
+    border: 2px solid #98fb98;
+    width: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #ffb6c1;
+    border: 2px solid #ffb6c1;
+}
+
+QScrollBar:vertical {
+    background: #e6ffe6;
+    width: 15px;
+    border: 1px solid #98fb98;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #98fb98, stop:1 #90ee90);
+    border: 1px solid #98fb98;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #ffb6c1;
+}
+
+/* Soft Ninja Turtle Shell Pattern for Terminal Background */
+QTextEdit::before, QPlainTextEdit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='none' stroke='%2398fb98' stroke-width='1' opacity='0.05'/%3E%3Cpath d='M20 2a18 18 0 0 1 0 36 18 18 0 0 1 0-36' fill='%2398fb98' opacity='0.02'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* Soft Turtle styling for special elements */
+QTabBar::tab:selected::before {
+    content: "🌸🐢";
+    color: #2d4a37;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Watermark styling for TMNT pastel theme */
+.watermark-logo {
+    color: rgba(74, 124, 89, 0.2) !important;
+    text-shadow: 0 0 10px rgba(152, 251, 152, 0.3);
+}
+
+.watermark-tagline {
+    color: rgba(74, 124, 89, 0.15) !important;
+    text-shadow: 0 0 5px rgba(152, 251, 152, 0.2);
+}
