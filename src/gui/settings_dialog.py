@@ -9,9 +9,9 @@ from PyQt5.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QFormLayout,
                            QDoubleSpinBox, QTabWidget, QPushButton, QFileDialog, 
                            QFontComboBox, QGroupBox, QRadioButton, QButtonGroup,
                            QDialogButtonBox, QColorDialog, QSlider, QSizePolicy,
-                           QWidget)
+                           QWidget, QTextEdit, QFrame, QApplication)
 from PyQt5.QtGui import QFont, QColor, QPalette
-from PyQt5.QtCore import Qt, QSettings, QSize
+from PyQt5.QtCore import Qt, QSettings, QSize, QTimer
 
 class SettingsDialog(QDialog):
     """Settings dialog for WRAPD application"""
@@ -29,7 +29,16 @@ class SettingsDialog(QDialog):
         self.logger = logging.getLogger("wrapd.settings")
         
         self.setWindowTitle("WRAPD Settings")
-        self.resize(600, 500)
+        self.resize(800, 600)
+        
+        # Store original theme for restoring on cancel
+        self.original_theme = self.config.get('appearance', 'theme', 'wutang_dark')
+        
+        # Timer for delayed preview (to avoid rapid theme changes)
+        self.preview_timer = QTimer()
+        self.preview_timer.setSingleShot(True)
+        self.preview_timer.timeout.connect(self._apply_preview_theme)
+        self.preview_delay = 300  # 300ms delay
         
         # Create UI
         self._create_ui()
@@ -106,14 +115,37 @@ class SettingsDialog(QDialog):
     def _create_appearance_tab(self):
         """Create the appearance settings tab"""
         appearance_tab = QWidget()
+        main_layout = QHBoxLayout()
+        appearance_tab.setLayout(main_layout)
+        
+        # Left side - settings
+        settings_widget = QWidget()
         layout = QFormLayout()
-        appearance_tab.setLayout(layout)
+        settings_widget.setLayout(layout)
         
         # Theme selection
         layout.addRow(QLabel("Theme:"))
         self.theme_combo = QComboBox()
         # Themes will be loaded in _load_settings()
+        
+        # Connect theme selection for live preview
+        self.theme_combo.currentTextChanged.connect(self._on_theme_selection_changed)
+        self.theme_combo.highlighted.connect(self._on_theme_highlighted)
+        
         layout.addRow(self.theme_combo)
+        
+        # Right side - preview
+        preview_group = QGroupBox("Theme Preview")
+        preview_layout = QVBoxLayout()
+        preview_group.setLayout(preview_layout)
+        
+        # Create preview widget
+        self.preview_widget = self._create_preview_widget()
+        preview_layout.addWidget(self.preview_widget)
+        
+        # Add both sides to main layout
+        main_layout.addWidget(settings_widget, 2)  # 2/3 of the space
+        main_layout.addWidget(preview_group, 1)   # 1/3 of the space
         
         # Custom theme path
         layout.addRow(QLabel("Custom Theme:"))
@@ -204,6 +236,108 @@ class SettingsDialog(QDialog):
         
         # Add appearance tab to tab widget
         self.tab_widget.addTab(appearance_tab, "Appearance")
+    
+    def _create_preview_widget(self):
+        """Create a preview widget showing theme appearance"""
+        preview_frame = QFrame()
+        preview_frame.setFrameStyle(QFrame.StyledPanel)
+        preview_frame.setMinimumSize(250, 200)
+        
+        preview_layout = QVBoxLayout()
+        preview_frame.setLayout(preview_layout)
+        
+        # Title
+        title_label = QLabel("Terminal Preview")
+        title_label.setStyleSheet("font-weight: bold; font-size: 14px;")
+        preview_layout.addWidget(title_label)
+        
+        # Mock terminal output
+        terminal_preview = QTextEdit()
+        terminal_preview.setReadOnly(True)
+        terminal_preview.setMaximumHeight(120)
+        terminal_preview.setFont(QFont("Courier", 10))
+        
+        # Sample terminal content
+        sample_text = """$ ls -la
+drwxr-xr-x  5 user  staff   160 Dec  6 12:30 .
+drwxr-xr-x  3 user  staff    96 Dec  6 12:25 ..
+-rw-r--r--  1 user  staff   123 Dec  6 12:30 config.py
+-rwxr-xr-x  1 user  staff  2048 Dec  6 12:29 main.py
+drwxr-xr-x  2 user  staff    64 Dec  6 12:25 themes/
+
+$ python main.py
+Starting WRAPD Terminal...
+✓ Theme loaded successfully"""
+        
+        terminal_preview.setPlainText(sample_text)
+        preview_layout.addWidget(terminal_preview)
+        
+        # UI Elements preview
+        ui_group = QGroupBox("UI Elements")
+        ui_layout = QVBoxLayout()
+        ui_group.setLayout(ui_layout)
+        
+        # Sample button
+        sample_button = QPushButton("Sample Button")
+        ui_layout.addWidget(sample_button)
+        
+        # Sample checkbox
+        sample_checkbox = QCheckBox("Sample Checkbox")
+        sample_checkbox.setChecked(True)
+        ui_layout.addWidget(sample_checkbox)
+        
+        # Sample combo
+        sample_combo = QComboBox()
+        sample_combo.addItems(["Option 1", "Option 2", "Option 3"])
+        ui_layout.addWidget(sample_combo)
+        
+        preview_layout.addWidget(ui_group)
+        
+        # Store references to update them
+        self.preview_terminal = terminal_preview
+        self.preview_title = title_label
+        self.preview_button = sample_button
+        self.preview_checkbox = sample_checkbox
+        self.preview_combo = sample_combo
+        self.preview_ui_group = ui_group
+        
+        return preview_frame
+    
+    def _on_theme_selection_changed(self, theme_name):
+        """Handle theme selection change (when user selects)"""
+        self.preview_timer.stop()
+        self.pending_theme = self._get_theme_id_from_name(theme_name)
+        self.preview_timer.start(self.preview_delay)
+    
+    def _on_theme_highlighted(self, index):
+        """Handle theme highlight (when user hovers with keyboard)"""
+        theme_name = self.theme_combo.itemText(index)
+        self.preview_timer.stop()
+        self.pending_theme = self._get_theme_id_from_name(theme_name)
+        self.preview_timer.start(self.preview_delay)
+    
+    def _get_theme_id_from_name(self, theme_name):
+        """Get theme ID from display name"""
+        for i in range(self.theme_combo.count()):
+            if self.theme_combo.itemText(i) == theme_name:
+                return self.theme_combo.itemData(i)
+        return 'wutang_dark'  # fallback
+    
+    def _apply_preview_theme(self):
+        """Apply the pending theme for preview"""
+        if hasattr(self, 'pending_theme') and self.pending_theme:
+            # Apply theme to the application
+            from .theme_manager import ThemeManager
+            theme_manager = ThemeManager(self.config)
+            
+            # Get main window reference
+            main_window = None
+            for widget in QApplication.instance().topLevelWidgets():
+                if hasattr(widget, 'central_widget'):  # Main window identifier
+                    main_window = widget
+                    break
+            
+            theme_manager.apply_theme(self.pending_theme, main_window)
     
     def _create_terminal_tab(self):
         """Create the terminal settings tab"""
@@ -535,19 +669,90 @@ class SettingsDialog(QDialog):
             
             # Model selection
             self.openrouter_model = QComboBox()
-            self.openrouter_model.addItems([
-                "openai/gpt-3.5-turbo",
-                "anthropic/claude-3-haiku",
-                "anthropic/claude-3-sonnet",
-                "anthropic/claude-3-opus",
-                "google/gemini-pro"
-            ])
+            
+            # Define models with costs (input/output per 1M tokens)
+            openrouter_models = [
+                # FREE MODELS (prioritized at top)
+                ("🆓 Meta: Llama 3.1 8B", "meta-llama/llama-3.1-8b-instruct:free", "FREE - Community supported"),
+                ("🆓 Microsoft: Phi-3 Mini", "microsoft/phi-3-mini-128k-instruct:free", "FREE - 3.8B params"),
+                ("🆓 Qwen: Qwen 2 7B", "qwen/qwen-2-7b-instruct:free", "FREE - 7B params"),
+                ("🆓 Google: Gemma 2 9B", "google/gemma-2-9b-it:free", "FREE - 9B params"),
+                
+                # SEPARATOR
+                ("─ PREMIUM MODELS ─", "", ""),
+                
+                # ANTHROPIC MODELS
+                ("Anthropic: Claude 3.5 Sonnet", "anthropic/claude-3.5-sonnet", "$3.00 / $15.00 per 1M tokens"),
+                ("Anthropic: Claude 3.5 Haiku", "anthropic/claude-3.5-haiku", "$0.25 / $1.25 per 1M tokens"),
+                ("Anthropic: Claude 3 Opus", "anthropic/claude-3-opus", "$15.00 / $75.00 per 1M tokens"),
+                ("Anthropic: Claude 3 Sonnet", "anthropic/claude-3-sonnet", "$3.00 / $15.00 per 1M tokens"),
+                ("Anthropic: Claude 3 Haiku", "anthropic/claude-3-haiku", "$0.25 / $1.25 per 1M tokens"),
+                
+                # OPENAI MODELS
+                ("OpenAI: GPT-4o", "openai/gpt-4o", "$2.50 / $10.00 per 1M tokens"),
+                ("OpenAI: GPT-4o Mini", "openai/gpt-4o-mini", "$0.15 / $0.60 per 1M tokens"),
+                ("OpenAI: GPT-4 Turbo", "openai/gpt-4-turbo", "$10.00 / $30.00 per 1M tokens"),
+                ("OpenAI: GPT-4", "openai/gpt-4", "$30.00 / $60.00 per 1M tokens"),
+                ("OpenAI: GPT-3.5 Turbo", "openai/gpt-3.5-turbo", "$0.50 / $1.50 per 1M tokens"),
+                
+                # GOOGLE MODELS
+                ("Google: Gemini Pro 1.5", "google/gemini-pro-1.5", "$1.25 / $5.00 per 1M tokens"),
+                ("Google: Gemini Flash 1.5", "google/gemini-flash-1.5", "$0.075 / $0.30 per 1M tokens"),
+                ("Google: Gemma 2 27B", "google/gemma-2-27b-it", "$0.27 / $0.27 per 1M tokens"),
+                
+                # META MODELS
+                ("Meta: Llama 3.1 405B", "meta-llama/llama-3.1-405b-instruct", "$2.70 / $2.70 per 1M tokens"),
+                ("Meta: Llama 3.1 70B", "meta-llama/llama-3.1-70b-instruct", "$0.40 / $0.40 per 1M tokens"),
+                ("Meta: Llama 3.1 8B", "meta-llama/llama-3.1-8b-instruct", "$0.055 / $0.055 per 1M tokens"),
+                ("Meta: Llama 3 70B", "meta-llama/llama-3-70b-instruct", "$0.59 / $0.79 per 1M tokens"),
+                ("Meta: Llama 3 8B", "meta-llama/llama-3-8b-instruct", "$0.055 / $0.055 per 1M tokens"),
+                
+                # MISTRAL MODELS  
+                ("Mistral: Large 2", "mistralai/mistral-large", "$2.00 / $6.00 per 1M tokens"),
+                ("Mistral: Medium", "mistralai/mistral-medium", "$2.70 / $8.10 per 1M tokens"),
+                ("Mistral: Small", "mistralai/mistral-small", "$0.20 / $0.60 per 1M tokens"),
+                ("Mistral: 7B Instruct", "mistralai/mistral-7b-instruct", "$0.065 / $0.065 per 1M tokens"),
+                ("Mistral: Mixtral 8x7B", "mistralai/mixtral-8x7b-instruct", "$0.24 / $0.24 per 1M tokens"),
+                ("Mistral: Mixtral 8x22B", "mistralai/mixtral-8x22b-instruct", "$0.65 / $0.65 per 1M tokens"),
+                
+                # PERPLEXITY MODELS
+                ("Perplexity: Llama 3.1 Sonar 70B", "perplexity/llama-3.1-sonar-large-128k-online", "$1.00 / $1.00 per 1M tokens"),
+                ("Perplexity: Llama 3.1 Sonar 8B", "perplexity/llama-3.1-sonar-small-128k-online", "$0.20 / $0.20 per 1M tokens"),
+                
+                # COHERE MODELS
+                ("Cohere: Command R+", "cohere/command-r-plus", "$2.50 / $10.00 per 1M tokens"),
+                ("Cohere: Command R", "cohere/command-r", "$0.15 / $0.60 per 1M tokens"),
+                
+                # DATABRICKS MODELS
+                ("Databricks: DBRX Instruct", "databricks/dbrx-instruct", "$0.75 / $2.25 per 1M tokens"),
+                
+                # SPECIALIZED MODELS
+                ("DeepSeek: Coder V2", "deepseek/deepseek-coder", "$0.14 / $0.28 per 1M tokens"),
+                ("01.AI: Yi Large", "01-ai/yi-large", "$0.60 / $0.60 per 1M tokens"),
+                ("Nous: Hermes 2 Mixtral 8x7B", "nousresearch/nous-hermes-2-mixtral-8x7b-dpo", "$0.27 / $0.27 per 1M tokens"),
+                ("Teknium: OpenHermes 2.5 Mistral 7B", "teknium/openhermes-2.5-mistral-7b", "$0.065 / $0.065 per 1M tokens"),
+                
+                # BUDGET-FRIENDLY OPTIONS
+                ("💰 Budget: Zephyr 7B Beta", "huggingfaceh4/zephyr-7b-beta", "$0.065 / $0.065 per 1M tokens"),
+                ("💰 Budget: Toppy M 7B", "undi95/toppy-m-7b", "$0.065 / $0.065 per 1M tokens"),
+            ]
+            
+            for display_name, model_id, cost_info in openrouter_models:
+                if model_id:  # Skip separator
+                    full_display = f"{display_name} - {cost_info}"
+                    self.openrouter_model.addItem(full_display, model_id)
+                else:
+                    # Add separator (disabled item)
+                    self.openrouter_model.addItem(display_name)
+                    self.openrouter_model.model().item(self.openrouter_model.count() - 1).setEnabled(False)
             
             # Set current model
             current_model = self.config.get('llm', 'model', 'anthropic/claude-3-haiku')
-            index = self.openrouter_model.findText(current_model, Qt.MatchFixedString)
-            if index >= 0:
-                self.openrouter_model.setCurrentIndex(index)
+            # Find by data (model ID) instead of text
+            for i in range(self.openrouter_model.count()):
+                if self.openrouter_model.itemData(i) == current_model:
+                    self.openrouter_model.setCurrentIndex(i)
+                    break
             
             form.addRow("Model:", self.openrouter_model)
             
@@ -602,6 +807,24 @@ class SettingsDialog(QDialog):
         
         # Accept dialog
         super().accept()
+    
+    def reject(self):
+        """Cancel dialog and restore original theme"""
+        # Restore original theme
+        from .theme_manager import ThemeManager
+        theme_manager = ThemeManager(self.config)
+        
+        # Get main window reference
+        main_window = None
+        for widget in QApplication.instance().topLevelWidgets():
+            if hasattr(widget, 'central_widget'):  # Main window identifier
+                main_window = widget
+                break
+        
+        theme_manager.apply_theme(self.original_theme, main_window)
+        
+        # Reject dialog
+        super().reject()
     
     def _save_settings(self):
         """Save settings to configuration"""
@@ -684,7 +907,9 @@ class SettingsDialog(QDialog):
                 self.config.set_api_key('openrouter', self.openrouter_api_key.text())
             
             # Model
-            self.config.set('llm', 'model', self.openrouter_model.currentText())
+            model_data = self.openrouter_model.currentData()
+            if model_data:  # Make sure it's not a separator
+                self.config.set('llm', 'model', model_data)
         
         # Temperature
         self.config.set('llm', 'temperature', str(self.temperature.value()))
