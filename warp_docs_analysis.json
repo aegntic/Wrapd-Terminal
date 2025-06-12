@@ -1,0 +1,975 @@
+{
+  "total_files": 114,
+  "total_size": 1763896,
+  "categories": {
+    "root": [
+      "index.md",
+      "terminal.md",
+      "knowledge-and-collaboration.md",
+      "getting-started.md",
+      "agents.md",
+      "support-and-billing.md",
+      "privacy.md",
+      "community.md"
+    ],
+    "community": [
+      "community/refer-a-friend.md",
+      "community/warp-preview-and-alpha-program.md"
+    ],
+    "support-and-billing": [
+      "support-and-billing/uninstalling-warp.md",
+      "support-and-billing/using-warp-offline.md",
+      "support-and-billing/known-issues.md",
+      "support-and-billing/sending-us-feedback.md",
+      "support-and-billing/troubleshooting-login-issues.md",
+      "support-and-billing/licenses.md",
+      "support-and-billing/plans-and-pricing.md",
+      "support-and-billing/updating-warp.md"
+    ],
+    "_gitbook": [
+      "_gitbook/image.md"
+    ],
+    "agents": [
+      "agents/voice.md",
+      "agents/active-ai.md",
+      "agents/warp-ai.md",
+      "agents/generate.md"
+    ],
+    "knowledge-and-collaboration": [
+      "knowledge-and-collaboration/session-sharing.md",
+      "knowledge-and-collaboration/mcp.md",
+      "knowledge-and-collaboration/rules.md",
+      "knowledge-and-collaboration/warp-drive.md",
+      "knowledge-and-collaboration/teams.md"
+    ],
+    "getting-started": [
+      "getting-started/using-warp-with-shells.md",
+      "getting-started/keyboard-shortcuts.md",
+      "getting-started/migrate-to-warp.md",
+      "getting-started/what-is-warp.md",
+      "getting-started/changelog.md"
+    ],
+    "appearance": [
+      "appearance/tabs-behavior.md",
+      "appearance/input-position.md",
+      "appearance/themes.md",
+      "appearance/text-fonts-cursor.md",
+      "appearance/custom-themes.md"
+    ],
+    "features": [
+      "features/keyboard-shortcuts.md",
+      "features/prompt.md",
+      "features/files-and-links.md",
+      "features/settings-sync.md"
+    ],
+    "terminal": [
+      "terminal/blocks.md",
+      "terminal/warpify.md",
+      "terminal/windows.md",
+      "terminal/command-completions.md",
+      "terminal/editor.md",
+      "terminal/integrations-and-plugins.md",
+      "terminal/entry.md",
+      "terminal/comparisons.md",
+      "terminal/sessions.md",
+      "terminal/more-features.md",
+      "terminal/appearance.md"
+    ],
+    "privacy": [
+      "privacy/network-log.md",
+      "privacy/secret-redaction.md",
+      "privacy/privacy.md"
+    ],
+    "agents/warp-ai": [
+      "agents/warp-ai/agent-mode.md"
+    ],
+    "knowledge-and-collaboration/warp-drive": [
+      "knowledge-and-collaboration/warp-drive/warp-drive-on-the-web.md",
+      "knowledge-and-collaboration/warp-drive/notebooks.md",
+      "knowledge-and-collaboration/warp-drive/workflows.md",
+      "knowledge-and-collaboration/warp-drive/prompts.md"
+    ],
+    "features/windows": [
+      "features/windows/split-panes.md"
+    ],
+    "features/editor": [
+      "features/editor/vim.md"
+    ],
+    "features/command-completions": [
+      "features/command-completions/autosuggestions.md",
+      "features/command-completions/completions.md"
+    ],
+    "terminal/windows": [
+      "terminal/windows/global-hotkey.md",
+      "terminal/windows/split-panes.md",
+      "terminal/windows/tabs.md"
+    ],
+    "terminal/warpify": [
+      "terminal/warpify/ssh.md",
+      "terminal/warpify/subshells.md",
+      "terminal/warpify/ssh-legacy.md"
+    ],
+    "terminal/editor": [
+      "terminal/editor/vim.md",
+      "terminal/editor/command-inspector.md",
+      "terminal/editor/alias-expansion.md"
+    ],
+    "terminal/sessions": [
+      "terminal/sessions/session-restoration.md",
+      "terminal/sessions/launch-configurations.md",
+      "terminal/sessions/session-navigation.md"
+    ],
+    "terminal/more-features": [
+      "terminal/more-features/smart-select.md",
+      "terminal/more-features/uri-scheme.md",
+      "terminal/more-features/notifications.md",
+      "terminal/more-features/markdown-viewer.md",
+      "terminal/more-features/accessibility.md",
+      "terminal/more-features/files-and-links.md",
+      "terminal/more-features/working-directory.md",
+      "terminal/more-features/settings-sync.md",
+      "terminal/more-features/linux.md",
+      "terminal/more-features/full-screen-apps.md",
+      "terminal/more-features/quit-warning.md"
+    ],
+    "terminal/comparisons": [
+      "terminal/comparisons/terminal-features.md",
+      "terminal/comparisons/performance.md"
+    ],
+    "terminal/command-completions": [
+      "terminal/command-completions/autosuggestions.md",
+      "terminal/command-completions/completions.md"
+    ],
+    "terminal/appearance": [
+      "terminal/appearance/tabs-behavior.md",
+      "terminal/appearance/input-position.md",
+      "terminal/appearance/prompt.md",
+      "terminal/appearance/pane-dimming.md",
+      "terminal/appearance/themes.md",
+      "terminal/appearance/app-icons.md",
+      "terminal/appearance/text-fonts-cursor.md",
+      "terminal/appearance/size-opacity-blurring.md",
+      "terminal/appearance/blocks-behavior.md",
+      "terminal/appearance/custom-themes.md"
+    ],
+    "terminal/blocks": [
+      "terminal/blocks/block-sharing.md",
+      "terminal/blocks/sticky-command-header.md",
+      "terminal/blocks/find.md",
+      "terminal/blocks/block-actions.md",
+      "terminal/blocks/block-filtering.md",
+      "terminal/blocks/block-basics.md",
+      "terminal/blocks/background-blocks.md"
+    ],
+    "terminal/entry": [
+      "terminal/entry/command-corrections.md",
+      "terminal/entry/command-history.md",
+      "terminal/entry/synchronized-inputs.md",
+      "terminal/entry/yaml-workflows.md",
+      "terminal/entry/command-search.md"
+    ]
+  },
+  "file_structure": {},
+  "content_overview": {
+    "index.md": {
+      "size_bytes": 23258,
+      "line_count": 316,
+      "has_content": true,
+      "word_count": 1857
+    },
+    "terminal.md": {
+      "size_bytes": 8783,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "knowledge-and-collaboration.md": {
+      "size_bytes": 8802,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "getting-started.md": {
+      "size_bytes": 8790,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "agents.md": {
+      "size_bytes": 8781,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "support-and-billing.md": {
+      "size_bytes": 8794,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "privacy.md": {
+      "size_bytes": 8782,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "community.md": {
+      "size_bytes": 8784,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "community/refer-a-friend.md": {
+      "size_bytes": 18851,
+      "line_count": 278,
+      "has_content": true,
+      "word_count": 1483
+    },
+    "community/warp-preview-and-alpha-program.md": {
+      "size_bytes": 12838,
+      "line_count": 180,
+      "has_content": true,
+      "word_count": 728
+    },
+    "support-and-billing/uninstalling-warp.md": {
+      "size_bytes": 14978,
+      "line_count": 274,
+      "has_content": true,
+      "word_count": 1003
+    },
+    "support-and-billing/using-warp-offline.md": {
+      "size_bytes": 11340,
+      "line_count": 151,
+      "has_content": true,
+      "word_count": 572
+    },
+    "support-and-billing/known-issues.md": {
+      "size_bytes": 32343,
+      "line_count": 419,
+      "has_content": true,
+      "word_count": 2540
+    },
+    "support-and-billing/sending-us-feedback.md": {
+      "size_bytes": 13620,
+      "line_count": 197,
+      "has_content": true,
+      "word_count": 778
+    },
+    "support-and-billing/troubleshooting-login-issues.md": {
+      "size_bytes": 16080,
+      "line_count": 207,
+      "has_content": true,
+      "word_count": 1087
+    },
+    "support-and-billing/licenses.md": {
+      "size_bytes": 30082,
+      "line_count": 1468,
+      "has_content": true,
+      "word_count": 2377
+    },
+    "support-and-billing/plans-and-pricing.md": {
+      "size_bytes": 33011,
+      "line_count": 305,
+      "has_content": true,
+      "word_count": 3167
+    },
+    "support-and-billing/updating-warp.md": {
+      "size_bytes": 11587,
+      "line_count": 147,
+      "has_content": true,
+      "word_count": 564
+    },
+    "_gitbook/image.md": {
+      "size_bytes": 429,
+      "line_count": 13,
+      "has_content": true,
+      "word_count": 12
+    },
+    "agents/voice.md": {
+      "size_bytes": 15580,
+      "line_count": 215,
+      "has_content": true,
+      "word_count": 1123
+    },
+    "agents/active-ai.md": {
+      "size_bytes": 13717,
+      "line_count": 177,
+      "has_content": true,
+      "word_count": 802
+    },
+    "agents/warp-ai.md": {
+      "size_bytes": 11121,
+      "line_count": 149,
+      "has_content": true,
+      "word_count": 586
+    },
+    "agents/generate.md": {
+      "size_bytes": 16604,
+      "line_count": 229,
+      "has_content": true,
+      "word_count": 1248
+    },
+    "knowledge-and-collaboration/session-sharing.md": {
+      "size_bytes": 15789,
+      "line_count": 200,
+      "has_content": true,
+      "word_count": 1013
+    },
+    "knowledge-and-collaboration/mcp.md": {
+      "size_bytes": 14465,
+      "line_count": 200,
+      "has_content": true,
+      "word_count": 874
+    },
+    "knowledge-and-collaboration/rules.md": {
+      "size_bytes": 11917,
+      "line_count": 166,
+      "has_content": true,
+      "word_count": 580
+    },
+    "knowledge-and-collaboration/warp-drive.md": {
+      "size_bytes": 19205,
+      "line_count": 284,
+      "has_content": true,
+      "word_count": 1719
+    },
+    "knowledge-and-collaboration/teams.md": {
+      "size_bytes": 15198,
+      "line_count": 212,
+      "has_content": true,
+      "word_count": 1000
+    },
+    "getting-started/using-warp-with-shells.md": {
+      "size_bytes": 20819,
+      "line_count": 279,
+      "has_content": true,
+      "word_count": 1630
+    },
+    "getting-started/keyboard-shortcuts.md": {
+      "size_bytes": 33461,
+      "line_count": 1238,
+      "has_content": true,
+      "word_count": 2497
+    },
+    "getting-started/migrate-to-warp.md": {
+      "size_bytes": 11925,
+      "line_count": 161,
+      "has_content": true,
+      "word_count": 638
+    },
+    "getting-started/what-is-warp.md": {
+      "size_bytes": 10907,
+      "line_count": 148,
+      "has_content": true,
+      "word_count": 572
+    },
+    "getting-started/changelog.md": {
+      "size_bytes": 178684,
+      "line_count": 3454,
+      "has_content": true,
+      "word_count": 19782
+    },
+    "appearance/tabs-behavior.md": {
+      "size_bytes": 8799,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "appearance/input-position.md": {
+      "size_bytes": 8800,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "appearance/themes.md": {
+      "size_bytes": 8792,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "appearance/text-fonts-cursor.md": {
+      "size_bytes": 8803,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "appearance/custom-themes.md": {
+      "size_bytes": 8799,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "features/keyboard-shortcuts.md": {
+      "size_bytes": 8802,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "features/prompt.md": {
+      "size_bytes": 8852,
+      "line_count": 120,
+      "has_content": true,
+      "word_count": 344
+    },
+    "features/files-and-links.md": {
+      "size_bytes": 8799,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "features/settings-sync.md": {
+      "size_bytes": 8797,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "terminal/blocks.md": {
+      "size_bytes": 9986,
+      "line_count": 143,
+      "has_content": true,
+      "word_count": 431
+    },
+    "terminal/warpify.md": {
+      "size_bytes": 10538,
+      "line_count": 147,
+      "has_content": true,
+      "word_count": 429
+    },
+    "terminal/windows.md": {
+      "size_bytes": 10847,
+      "line_count": 153,
+      "has_content": true,
+      "word_count": 459
+    },
+    "terminal/command-completions.md": {
+      "size_bytes": 9899,
+      "line_count": 144,
+      "has_content": true,
+      "word_count": 403
+    },
+    "terminal/editor.md": {
+      "size_bytes": 14706,
+      "line_count": 295,
+      "has_content": true,
+      "word_count": 1091
+    },
+    "terminal/integrations-and-plugins.md": {
+      "size_bytes": 9503,
+      "line_count": 134,
+      "has_content": true,
+      "word_count": 370
+    },
+    "terminal/entry.md": {
+      "size_bytes": 11143,
+      "line_count": 158,
+      "has_content": true,
+      "word_count": 506
+    },
+    "terminal/comparisons.md": {
+      "size_bytes": 9225,
+      "line_count": 128,
+      "has_content": true,
+      "word_count": 353
+    },
+    "terminal/sessions.md": {
+      "size_bytes": 10609,
+      "line_count": 151,
+      "has_content": true,
+      "word_count": 434
+    },
+    "terminal/more-features.md": {
+      "size_bytes": 9940,
+      "line_count": 128,
+      "has_content": true,
+      "word_count": 367
+    },
+    "terminal/appearance.md": {
+      "size_bytes": 9774,
+      "line_count": 128,
+      "has_content": true,
+      "word_count": 366
+    },
+    "privacy/network-log.md": {
+      "size_bytes": 11173,
+      "line_count": 155,
+      "has_content": true,
+      "word_count": 621
+    },
+    "privacy/secret-redaction.md": {
+      "size_bytes": 12063,
+      "line_count": 187,
+      "has_content": true,
+      "word_count": 655
+    },
+    "privacy/privacy.md": {
+      "size_bytes": 42083,
+      "line_count": 884,
+      "has_content": true,
+      "word_count": 4836
+    },
+    "agents/warp-ai/agent-mode.md": {
+      "size_bytes": 53809,
+      "line_count": 632,
+      "has_content": true,
+      "word_count": 5480
+    },
+    "knowledge-and-collaboration/warp-drive/warp-drive-on-the-web.md": {
+      "size_bytes": 14656,
+      "line_count": 179,
+      "has_content": true,
+      "word_count": 760
+    },
+    "knowledge-and-collaboration/warp-drive/notebooks.md": {
+      "size_bytes": 21501,
+      "line_count": 283,
+      "has_content": true,
+      "word_count": 1415
+    },
+    "knowledge-and-collaboration/warp-drive/workflows.md": {
+      "size_bytes": 19676,
+      "line_count": 239,
+      "has_content": true,
+      "word_count": 1357
+    },
+    "knowledge-and-collaboration/warp-drive/prompts.md": {
+      "size_bytes": 16156,
+      "line_count": 196,
+      "has_content": true,
+      "word_count": 1035
+    },
+    "features/windows/split-panes.md": {
+      "size_bytes": 8803,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "features/editor/vim.md": {
+      "size_bytes": 8794,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "features/command-completions/autosuggestions.md": {
+      "size_bytes": 8819,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "features/command-completions/completions.md": {
+      "size_bytes": 8815,
+      "line_count": 118,
+      "has_content": true,
+      "word_count": 332
+    },
+    "terminal/windows/global-hotkey.md": {
+      "size_bytes": 14103,
+      "line_count": 179,
+      "has_content": true,
+      "word_count": 807
+    },
+    "terminal/windows/split-panes.md": {
+      "size_bytes": 12828,
+      "line_count": 178,
+      "has_content": true,
+      "word_count": 808
+    },
+    "terminal/windows/tabs.md": {
+      "size_bytes": 14776,
+      "line_count": 213,
+      "has_content": true,
+      "word_count": 1050
+    },
+    "terminal/warpify/ssh.md": {
+      "size_bytes": 14573,
+      "line_count": 174,
+      "has_content": true,
+      "word_count": 924
+    },
+    "terminal/warpify/subshells.md": {
+      "size_bytes": 17659,
+      "line_count": 229,
+      "has_content": true,
+      "word_count": 1312
+    },
+    "terminal/warpify/ssh-legacy.md": {
+      "size_bytes": 13824,
+      "line_count": 176,
+      "has_content": true,
+      "word_count": 850
+    },
+    "terminal/editor/vim.md": {
+      "size_bytes": 15936,
+      "line_count": 320,
+      "has_content": true,
+      "word_count": 1102
+    },
+    "terminal/editor/command-inspector.md": {
+      "size_bytes": 10374,
+      "line_count": 149,
+      "has_content": true,
+      "word_count": 477
+    },
+    "terminal/editor/alias-expansion.md": {
+      "size_bytes": 11107,
+      "line_count": 162,
+      "has_content": true,
+      "word_count": 583
+    },
+    "terminal/sessions/session-restoration.md": {
+      "size_bytes": 13214,
+      "line_count": 210,
+      "has_content": true,
+      "word_count": 715
+    },
+    "terminal/sessions/launch-configurations.md": {
+      "size_bytes": 19328,
+      "line_count": 381,
+      "has_content": true,
+      "word_count": 1428
+    },
+    "terminal/sessions/session-navigation.md": {
+      "size_bytes": 11113,
+      "line_count": 151,
+      "has_content": true,
+      "word_count": 551
+    },
+    "terminal/more-features/smart-select.md": {
+      "size_bytes": 10323,
+      "line_count": 150,
+      "has_content": true,
+      "word_count": 487
+    },
+    "terminal/more-features/uri-scheme.md": {
+      "size_bytes": 10220,
+      "line_count": 148,
+      "has_content": true,
+      "word_count": 442
+    },
+    "terminal/more-features/notifications.md": {
+      "size_bytes": 14907,
+      "line_count": 196,
+      "has_content": true,
+      "word_count": 1062
+    },
+    "terminal/more-features/markdown-viewer.md": {
+      "size_bytes": 15368,
+      "line_count": 197,
+      "has_content": true,
+      "word_count": 1036
+    },
+    "terminal/more-features/accessibility.md": {
+      "size_bytes": 15009,
+      "line_count": 174,
+      "has_content": true,
+      "word_count": 1157
+    },
+    "terminal/more-features/files-and-links.md": {
+      "size_bytes": 14142,
+      "line_count": 209,
+      "has_content": true,
+      "word_count": 931
+    },
+    "terminal/more-features/working-directory.md": {
+      "size_bytes": 11150,
+      "line_count": 153,
+      "has_content": true,
+      "word_count": 550
+    },
+    "terminal/more-features/settings-sync.md": {
+      "size_bytes": 13489,
+      "line_count": 167,
+      "has_content": true,
+      "word_count": 802
+    },
+    "terminal/more-features/linux.md": {
+      "size_bytes": 10151,
+      "line_count": 142,
+      "has_content": true,
+      "word_count": 472
+    },
+    "terminal/more-features/full-screen-apps.md": {
+      "size_bytes": 12688,
+      "line_count": 172,
+      "has_content": true,
+      "word_count": 732
+    },
+    "terminal/more-features/quit-warning.md": {
+      "size_bytes": 11083,
+      "line_count": 154,
+      "has_content": true,
+      "word_count": 597
+    },
+    "terminal/comparisons/terminal-features.md": {
+      "size_bytes": 10236,
+      "line_count": 251,
+      "has_content": true,
+      "word_count": 533
+    },
+    "terminal/comparisons/performance.md": {
+      "size_bytes": 16456,
+      "line_count": 374,
+      "has_content": true,
+      "word_count": 1000
+    },
+    "terminal/command-completions/autosuggestions.md": {
+      "size_bytes": 11767,
+      "line_count": 173,
+      "has_content": true,
+      "word_count": 634
+    },
+    "terminal/command-completions/completions.md": {
+      "size_bytes": 19084,
+      "line_count": 1105,
+      "has_content": true,
+      "word_count": 1628
+    },
+    "terminal/appearance/tabs-behavior.md": {
+      "size_bytes": 13349,
+      "line_count": 180,
+      "has_content": true,
+      "word_count": 724
+    },
+    "terminal/appearance/input-position.md": {
+      "size_bytes": 12778,
+      "line_count": 179,
+      "has_content": true,
+      "word_count": 864
+    },
+    "terminal/appearance/prompt.md": {
+      "size_bytes": 22657,
+      "line_count": 339,
+      "has_content": true,
+      "word_count": 1653
+    },
+    "terminal/appearance/pane-dimming.md": {
+      "size_bytes": 10570,
+      "line_count": 157,
+      "has_content": true,
+      "word_count": 507
+    },
+    "terminal/appearance/themes.md": {
+      "size_bytes": 18990,
+      "line_count": 219,
+      "has_content": true,
+      "word_count": 645
+    },
+    "terminal/appearance/app-icons.md": {
+      "size_bytes": 16035,
+      "line_count": 177,
+      "has_content": true,
+      "word_count": 472
+    },
+    "terminal/appearance/text-fonts-cursor.md": {
+      "size_bytes": 11404,
+      "line_count": 173,
+      "has_content": true,
+      "word_count": 616
+    },
+    "terminal/appearance/size-opacity-blurring.md": {
+      "size_bytes": 13076,
+      "line_count": 183,
+      "has_content": true,
+      "word_count": 760
+    },
+    "terminal/appearance/blocks-behavior.md": {
+      "size_bytes": 11987,
+      "line_count": 164,
+      "has_content": true,
+      "word_count": 568
+    },
+    "terminal/appearance/custom-themes.md": {
+      "size_bytes": 18921,
+      "line_count": 380,
+      "has_content": true,
+      "word_count": 1392
+    },
+    "terminal/blocks/block-sharing.md": {
+      "size_bytes": 14663,
+      "line_count": 202,
+      "has_content": true,
+      "word_count": 928
+    },
+    "terminal/blocks/sticky-command-header.md": {
+      "size_bytes": 13141,
+      "line_count": 176,
+      "has_content": true,
+      "word_count": 823
+    },
+    "terminal/blocks/find.md": {
+      "size_bytes": 11298,
+      "line_count": 165,
+      "has_content": true,
+      "word_count": 584
+    },
+    "terminal/blocks/block-actions.md": {
+      "size_bytes": 14859,
+      "line_count": 234,
+      "has_content": true,
+      "word_count": 965
+    },
+    "terminal/blocks/block-filtering.md": {
+      "size_bytes": 12007,
+      "line_count": 166,
+      "has_content": true,
+      "word_count": 691
+    },
+    "terminal/blocks/block-basics.md": {
+      "size_bytes": 14603,
+      "line_count": 222,
+      "has_content": true,
+      "word_count": 1073
+    },
+    "terminal/blocks/background-blocks.md": {
+      "size_bytes": 11405,
+      "line_count": 158,
+      "has_content": true,
+      "word_count": 622
+    },
+    "terminal/entry/command-corrections.md": {
+      "size_bytes": 10993,
+      "line_count": 183,
+      "has_content": true,
+      "word_count": 558
+    },
+    "terminal/entry/command-history.md": {
+      "size_bytes": 10995,
+      "line_count": 153,
+      "has_content": true,
+      "word_count": 519
+    },
+    "terminal/entry/synchronized-inputs.md": {
+      "size_bytes": 12554,
+      "line_count": 183,
+      "has_content": true,
+      "word_count": 733
+    },
+    "terminal/entry/yaml-workflows.md": {
+      "size_bytes": 18602,
+      "line_count": 312,
+      "has_content": true,
+      "word_count": 1297
+    },
+    "terminal/entry/command-search.md": {
+      "size_bytes": 13015,
+      "line_count": 199,
+      "has_content": true,
+      "word_count": 628
+    }
+  },
+  "urls_crawled": [
+    "https://docs.warp.dev/",
+    "https://docs.warp.dev/terminal",
+    "https://docs.warp.dev/knowledge-and-collaboration",
+    "https://docs.warp.dev/getting-started",
+    "https://docs.warp.dev/agents",
+    "https://docs.warp.dev/support-and-billing",
+    "https://docs.warp.dev/privacy",
+    "https://docs.warp.dev/community",
+    "https://docs.warp.dev/community/refer-a-friend",
+    "https://docs.warp.dev/community/warp-preview-and-alpha-program",
+    "https://docs.warp.dev/support-and-billing/uninstalling-warp",
+    "https://docs.warp.dev/support-and-billing/using-warp-offline",
+    "https://docs.warp.dev/support-and-billing/known-issues",
+    "https://docs.warp.dev/support-and-billing/sending-us-feedback",
+    "https://docs.warp.dev/support-and-billing/troubleshooting-login-issues",
+    "https://docs.warp.dev/support-and-billing/licenses",
+    "https://docs.warp.dev/support-and-billing/plans-and-pricing",
+    "https://docs.warp.dev/support-and-billing/updating-warp",
+    "https://docs.warp.dev/~gitbook/image?url=https%3A%2F%2F2297236823-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MbqIgTw17KQvq_DQuRr%252Fuploads%252Fgit-blob-625611e115a2ee1566b5a2460ccc364432e25fed%252Ffancy-dracula.png%3Falt%3Dmedia&amp;width=300&amp;dpr=4&amp;quality=100&amp;sign=109ed270&amp;sv=2",
+    "https://docs.warp.dev/agents/voice",
+    "https://docs.warp.dev/agents/active-ai",
+    "https://docs.warp.dev/agents/warp-ai",
+    "https://docs.warp.dev/agents/generate",
+    "https://docs.warp.dev/knowledge-and-collaboration/session-sharing",
+    "https://docs.warp.dev/knowledge-and-collaboration/mcp",
+    "https://docs.warp.dev/knowledge-and-collaboration/rules",
+    "https://docs.warp.dev/knowledge-and-collaboration/warp-drive",
+    "https://docs.warp.dev/knowledge-and-collaboration/teams",
+    "https://docs.warp.dev/getting-started/using-warp-with-shells",
+    "https://docs.warp.dev/getting-started/keyboard-shortcuts",
+    "https://docs.warp.dev/getting-started/migrate-to-warp",
+    "https://docs.warp.dev/getting-started/what-is-warp",
+    "https://docs.warp.dev/getting-started/changelog",
+    "https://docs.warp.dev/appearance/tabs-behavior",
+    "https://docs.warp.dev/appearance/input-position",
+    "https://docs.warp.dev/appearance/themes",
+    "https://docs.warp.dev/appearance/text-fonts-cursor",
+    "https://docs.warp.dev/appearance/custom-themes",
+    "https://docs.warp.dev/features/keyboard-shortcuts",
+    "https://docs.warp.dev/features/prompt",
+    "https://docs.warp.dev/features/files-and-links",
+    "https://docs.warp.dev/features/settings-sync",
+    "https://docs.warp.dev/terminal/blocks",
+    "https://docs.warp.dev/terminal/warpify",
+    "https://docs.warp.dev/terminal/windows",
+    "https://docs.warp.dev/terminal/command-completions",
+    "https://docs.warp.dev/terminal/editor",
+    "https://docs.warp.dev/terminal/integrations-and-plugins",
+    "https://docs.warp.dev/terminal/entry",
+    "https://docs.warp.dev/terminal/comparisons",
+    "https://docs.warp.dev/terminal/sessions",
+    "https://docs.warp.dev/terminal/more-features",
+    "https://docs.warp.dev/terminal/appearance",
+    "https://docs.warp.dev/privacy/network-log",
+    "https://docs.warp.dev/privacy/secret-redaction",
+    "https://docs.warp.dev/privacy/privacy",
+    "https://docs.warp.dev/agents/warp-ai/agent-mode",
+    "https://docs.warp.dev/knowledge-and-collaboration/warp-drive/warp-drive-on-the-web",
+    "https://docs.warp.dev/knowledge-and-collaboration/warp-drive/notebooks",
+    "https://docs.warp.dev/knowledge-and-collaboration/warp-drive/workflows",
+    "https://docs.warp.dev/knowledge-and-collaboration/warp-drive/prompts",
+    "https://docs.warp.dev/features/windows/split-panes",
+    "https://docs.warp.dev/features/editor/vim",
+    "https://docs.warp.dev/features/command-completions/autosuggestions",
+    "https://docs.warp.dev/features/command-completions/completions",
+    "https://docs.warp.dev/terminal/windows/global-hotkey",
+    "https://docs.warp.dev/terminal/windows/split-panes",
+    "https://docs.warp.dev/terminal/windows/tabs",
+    "https://docs.warp.dev/terminal/warpify/ssh",
+    "https://docs.warp.dev/terminal/warpify/subshells",
+    "https://docs.warp.dev/terminal/warpify/ssh-legacy",
+    "https://docs.warp.dev/terminal/editor/vim",
+    "https://docs.warp.dev/terminal/editor/command-inspector",
+    "https://docs.warp.dev/terminal/editor/alias-expansion",
+    "https://docs.warp.dev/terminal/sessions/session-restoration",
+    "https://docs.warp.dev/terminal/sessions/launch-configurations",
+    "https://docs.warp.dev/terminal/sessions/session-navigation",
+    "https://docs.warp.dev/terminal/more-features/smart-select",
+    "https://docs.warp.dev/terminal/more-features/uri-scheme",
+    "https://docs.warp.dev/terminal/more-features/notifications",
+    "https://docs.warp.dev/terminal/more-features/markdown-viewer",
+    "https://docs.warp.dev/terminal/more-features/accessibility",
+    "https://docs.warp.dev/terminal/more-features/files-and-links",
+    "https://docs.warp.dev/terminal/more-features/working-directory",
+    "https://docs.warp.dev/terminal/more-features/settings-sync",
+    "https://docs.warp.dev/terminal/more-features/linux",
+    "https://docs.warp.dev/terminal/more-features/full-screen-apps",
+    "https://docs.warp.dev/terminal/more-features/quit-warning",
+    "https://docs.warp.dev/terminal/comparisons/terminal-features",
+    "https://docs.warp.dev/terminal/comparisons/performance",
+    "https://docs.warp.dev/terminal/command-completions/autosuggestions",
+    "https://docs.warp.dev/terminal/command-completions/completions",
+    "https://docs.warp.dev/terminal/appearance/tabs-behavior",
+    "https://docs.warp.dev/terminal/appearance/input-position",
+    "https://docs.warp.dev/terminal/appearance/prompt",
+    "https://docs.warp.dev/terminal/appearance/pane-dimming",
+    "https://docs.warp.dev/terminal/appearance/themes",
+    "https://docs.warp.dev/terminal/appearance/app-icons",
+    "https://docs.warp.dev/terminal/appearance/text-fonts-cursor",
+    "https://docs.warp.dev/terminal/appearance/size-opacity-blurring",
+    "https://docs.warp.dev/terminal/appearance/blocks-behavior",
+    "https://docs.warp.dev/terminal/appearance/custom-themes",
+    "https://docs.warp.dev/terminal/blocks/block-sharing",
+    "https://docs.warp.dev/terminal/blocks/sticky-command-header",
+    "https://docs.warp.dev/terminal/blocks/find",
+    "https://docs.warp.dev/terminal/blocks/block-actions",
+    "https://docs.warp.dev/terminal/blocks/block-filtering",
+    "https://docs.warp.dev/terminal/blocks/block-basics",
+    "https://docs.warp.dev/terminal/blocks/background-blocks",
+    "https://docs.warp.dev/terminal/entry/command-corrections",
+    "https://docs.warp.dev/terminal/entry/command-history",
+    "https://docs.warp.dev/terminal/entry/synchronized-inputs",
+    "https://docs.warp.dev/terminal/entry/yaml-workflows",
+    "https://docs.warp.dev/terminal/entry/command-search"
+  ]
+}
