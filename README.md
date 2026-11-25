@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/cover-16x9.jpg" alt="Wrapd-Terminal — AI-Powered Terminal Enhancement" width="100%" />
+</p>
+
 # WRAPD: Warp Replacement with AI-Powered Delivery
 
 <div align="center">
